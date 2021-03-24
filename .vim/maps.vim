@@ -10,11 +10,11 @@ nmap <Leader>+ 10<C-w>>
 nmap <Leader>- 10<C-w><
 
 " quick semi
-nmap ; $a;<Esc>
-nmap , $a,<Esc>
-nmap <Leader>w :w<CR>
-nmap <Leader>q :q<CR>
-nmap <Leader>nn :noh<CR>
+nmap ; $a;<C-O><Esc>
+nmap , $a,<C-O><Esc>
+nmap <silent><Leader>w :w<CR>
+nmap <silent><Leader>q :q<CR>
+nmap <silent><Leader>nn :noh<CR>
 " Minimize tags
 nmap <Leader>sm zf%
 nmap <Leader>sn za
@@ -23,20 +23,26 @@ nmap <Leader>sn za
 nmap <Leader>sr <C-S>,
 vmap <Leader>sr <C-S>,
 
+"marks
+nmap <silent><Leader>dd :delmarks!<CR>
+nmap <silent><Leader>dl :delmarks AD<CR>
+nmap <silent><Leader>dj 'A
+nmap <silent><Leader>dk 'D
+nmap <Leader>ds :marks<CR>
+
 " maps insert mode
-inoremap<C-D> <Esc>
+inoremap <C-D> <Esc>
 inoremap <C-H> <Left>
 inoremap <C-L> <Right>
-inoremap <C-V> <esc>:set paste<cr>a<c-r>=getreg('+')<cr><esc>:set nopaste<cr>mi`[=`]`ia
 
 " maps visual mode
 vmap <C-D> <Esc>
+
 
 " indent
 nmap <Leader>se i<CR><Esc>
 nmap <Leader>sa a<CR><Esc>ko
 nmap <Leader>sp o<C-V><Esc>
-nmap <Leader>sl <S-i><Tab><Esc>
 nmap <Leader>si <Plug>(Prettier)
 
 " shorter commands
@@ -61,6 +67,8 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
+imap <C-.> <Plug>(coc-snippets-expand-jump)
+imap <C-z> <Plug>(coc-snippets-expand)
 
 " diagnostics
 nnoremap <leader>kp :let @*=expand("%")<CR>
@@ -102,13 +110,6 @@ nnoremap <Leader>G :G<cr>
 nnoremap <Leader>gp :Gpush<cr>
 nnoremap <Leader>gl :Gpull<cr>
 
-
-" Use <c-space> to trigger completion.
-"if &filetype == "javascript" || &filetype == "python"
-  "inoremap <c-space> <C-x><C-u>
-"else
-  "inoremap <silent><expr> <c-space> coc#refresh()
-"endif
 
 set splitright
 function! OpenTerminal()

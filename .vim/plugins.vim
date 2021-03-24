@@ -30,6 +30,7 @@ Plug 'christoomey/vim-tmux-navigator'
 " autocomplete
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'nvim-lua/completion-nvim'
 
 " test
 Plug 'tyewang/vimux-jest-test'
