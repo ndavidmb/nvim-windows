@@ -14,6 +14,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
+Plug 'ayu-theme/ayu-vim'
 
 " Tree
 Plug 'scrooloose/nerdtree'

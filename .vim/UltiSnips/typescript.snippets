@@ -45,3 +45,16 @@ endsnippet
 snippet ret	"return" b
 return $1;
 endsnippet
+
+snippet reducer "reducer" b
+import { createReducer, on, Action } from '@ngrx/store';
+import * as actions from './$1';
+
+export const initialState = $2;
+
+const _$3Reducer = createReducer( initialState,
+  on(actions.$4, ( state ) => $5)
+);
+
+export const $3Reducer = (state = initialState, action: Action) => _$3Reducer(state, action);
+endsnippet

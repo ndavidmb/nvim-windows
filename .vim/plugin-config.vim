@@ -22,7 +22,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \ },
-      \ 'colorscheme': 'gruvbox',
+      \ 'colorscheme': 'ayu',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''
@@ -46,6 +46,10 @@ let g:UltiSnipsSnippetDirectories=['~/.config/vim/.vim/UltiSnips']
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
+" Indent line
+let g:indentLine_color_dark = 1
+set listchars=tab:‣\ 
+set list
 
 " Match paren
 let g:vim_matchtag_enable_by_default = 1

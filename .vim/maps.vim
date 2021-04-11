@@ -1,6 +1,5 @@
 let mapleader=" "
 
-
 " testing
 nmap <Leader>t :TestNearest<CR>
 nmap <Leader>T :TestFile<CR>
@@ -10,8 +9,8 @@ nmap <Leader>+ 10<C-w>>
 nmap <Leader>- 10<C-w><
 
 " quick semi
-nmap ; $a;<C-O><Esc>
-nmap , $a,<C-O><Esc>
+nmap ; $a;<Esc>
+nmap , $a,<Esc>
 nmap <silent><Leader>w :w<CR>
 nmap <silent><Leader>q :q<CR>
 nmap <silent><Leader>nn :noh<CR>
@@ -28,6 +27,8 @@ nmap <silent><Leader>dd :delmarks!<CR>
 nmap <silent><Leader>dl :delmarks AD<CR>
 nmap <silent><Leader>dj 'A
 nmap <silent><Leader>dk 'D
+nmap <silent><Leader>du mA
+nmap <silent><Leader>di mD
 nmap <Leader>ds :marks<CR>
 
 " maps insert mode
@@ -42,7 +43,7 @@ vmap <C-D> <Esc>
 " indent
 nmap <Leader>se i<CR><Esc>
 nmap <Leader>sa a<CR><Esc>ko
-nmap <Leader>sp o<C-V><Esc>
+nmap <Leader>sp o<C-R>"<Esc>
 nmap <Leader>si <Plug>(Prettier)
 
 " shorter commands
@@ -52,6 +53,7 @@ cnoreabbrev diff Gdiff
 cnoreabbrev c++ !g++ -std=c++11 % -Wall -g -o %.out && ./%.out
 " plugs
 map <Leader>nt :NERDTreeFind<CR>
+nmap <Leader>nr :NERDTreeFocus<cr>R<c-w><c-p>
 map <Leader>p :Files<CR>
 map <Leader>ag :Ag<CR>
 
@@ -61,14 +63,11 @@ inoremap <expr><C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
 inoremap <expr><C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
 
 
-
 " Remap keys for gotos
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-imap <C-.> <Plug>(coc-snippets-expand-jump)
-imap <C-z> <Plug>(coc-snippets-expand)
 
 " diagnostics
 nnoremap <leader>kp :let @*=expand("%")<CR>
@@ -107,8 +106,9 @@ nmap <Leader>f <Plug>(easymotion-s2)
 
 " git
 nnoremap <Leader>G :G<cr>
-nnoremap <Leader>gp :Gpush<cr>
-nnoremap <Leader>gl :Gpull<cr>
+nnoremap <Leader>gp :Git push<cr>
+nnoremap <Leader>gl :Git pull<cr>
+nnoremap <Leader>ga :Git add .<cr>
 
 
 set splitright
