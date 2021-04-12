@@ -1,5 +1,14 @@
 set number
-set mouse=a
+" toggle between terminal and vim mouse
+map <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
+imap <silent><F12> :let &mouse=(&mouse == "a"?"":"a")<CR>:call ShowMouseMode()<CR>
+function ShowMouseMode()
+    if (&mouse == 'a')
+        echo "mouse-vim"
+    else
+        echo "mouse-xterm"
+    endif
+endfunction
 set numberwidth=1
 set clipboard=unnamedplus
 syntax on
@@ -11,11 +20,11 @@ set showmatch
 set sw=2
 set relativenumber
 set termguicolors
-so ~/.config/vim/.vim/plugins.vim
-so ~/.config/vim/.vim/maps.vim
-so ~/.config/vim/.vim/plugin-config.vim
+so ~\.config\vim-configs\.vim\plugins.vim
+so ~\.config\vim-configs\.vim\maps.vim
+so ~\.config\vim-configs\.vim\plugin-config.vim
 
-let ayucolor="mirage"
+let ayucolor="dark"
 
 colorscheme ayu
 
