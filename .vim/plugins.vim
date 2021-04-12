@@ -1,5 +1,4 @@
-
-call plug#begin('~/.config/vim-configs/.vim/plugged')
+call plug#begin('~/.config/nvim-windows/.vim/plugged')
 " syntax
 Plug 'sheerun/vim-polyglot'
 

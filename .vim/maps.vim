@@ -32,7 +32,7 @@ nmap <silent><Leader>di mD
 nmap <Leader>ds :marks<CR>
 
 " maps insert mode
-inoremap <C-D> <Esc>
+inoremap jj <Esc>
 inoremap <C-H> <Left>
 inoremap <C-L> <Right>
 
@@ -114,10 +114,10 @@ nnoremap <Leader>ga :Git add .<cr>
 set splitright
 function! OpenTerminal()
   " move to right most buffer
-  "execute "normal \<C-l>"
-  "execute "normal \<C-l>"
-  "execute "normal \<C-l>"
-  "execute "normal \<C-l>"
+  execute "normal \<C-l>"
+  execute "normal \<C-l>"
+  execute "normal \<C-l>"
+  execute "normal \<C-l>"
 
   let bufNum = bufnr("%")
   let bufType = getbufvar(bufNum, "&buftype", "not found")
@@ -132,10 +132,6 @@ function! OpenTerminal()
     " turn off numbers
     execute "set nonu"
     execute "set nornu"
-
-    " toggle insert on enter/exit
-    " silent au BufLeave <buffer> stopinsert!
-    " silent au BufWinEnter,WinEnter <buffer> startinsert!
     
     " set maps inside terminal buffer
     execute "tnoremap <buffer> <C-k> <C-\\><C-n><C-w><C-k>"
