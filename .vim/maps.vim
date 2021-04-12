@@ -73,8 +73,8 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <leader>kp :let @*=expand("%")<CR>
 
 " tabs navigation
-map <Leader>h :tabprevious<cr>
-map <Leader>l :tabnext<cr>
+map <S-j> :tabprevious<cr>
+map <S-k> :tabnext<cr>
 
 " buffers
 map <Leader>ob :Buffers<cr>
