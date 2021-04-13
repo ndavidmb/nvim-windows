@@ -22,15 +22,6 @@ nmap <Leader>sn za
 nmap <Leader>sr <C-S>,
 vmap <Leader>sr <C-S>,
 
-"marks
-nmap <silent><Leader>dd :delmarks!<CR>
-nmap <silent><Leader>dl :delmarks AD<CR>
-nmap <silent><Leader>dj 'A
-nmap <silent><Leader>dk 'D
-nmap <silent><Leader>du mA
-nmap <silent><Leader>di mD
-nmap <Leader>ds :marks<CR>
-
 " maps insert mode
 inoremap jj <Esc>
 inoremap <C-H> <Left>
@@ -54,8 +45,9 @@ cnoreabbrev c++ !g++ -std=c++11 % -Wall -g -o %.out && ./%.out
 " plugs
 map <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>nr :NERDTreeFocus<cr>R<c-w><c-p>
-map <Leader>p :Files<CR>
+map <Leader>p :FZF<CR>
 map <Leader>ag :Ag<CR>
+
 
 " Use <c-space> to trigger completion.
 inoremap <silent><expr> <c-space> coc#refresh()
@@ -101,7 +93,7 @@ endfunction
 " faster scrolling
 nnoremap <silent> <C-e> 10<C-e>
 nnoremap <silent> <C-y> 10<C-y>
-nmap <Leader>f <Plug>(easymotion-s2)
+nmap <Leader>f <Plug>(easymotion-bd-f)
 
 
 " git
@@ -127,7 +119,7 @@ function! OpenTerminal()
     execute "q"
   else
     " open terminal
-    execute "bel 10 sp term://powershell"
+    execute "bel 10 sp term://cmd"
 
     " turn off numbers
     execute "set nonu"

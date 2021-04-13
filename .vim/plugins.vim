@@ -26,7 +26,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " autocomplete
 Plug 'sirver/ultisnips'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'nvim-lua/completion-nvim'
 
 " test
 Plug 'tyewang/vimux-jest-test'
@@ -35,7 +34,7 @@ Plug 'janko-m/vim-test'
 " IDE
 Plug 'editorconfig/editorconfig-vim'
 Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf.vim', { 'commit': '23dda8602f138a9d75dd03803a79733ee783e356' }
 Plug 'terryma/vim-multiple-cursors'
 Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-signify'

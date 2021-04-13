@@ -41,8 +41,7 @@ let NERDTreeMapOpenInTab='tt'
 let g:javascript_plugin_flow = 1
 
 " Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsSnippetDirectories=['~/.config/vim/.vim/UltiSnips']
-"let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsSnippetDirectories=['~/.config/nvim-windows/.vim/UltiSnips']
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<S-tab>"
 
@@ -62,21 +61,22 @@ autocmd FileType html EmmetInstall
 let g:user_emmet_leader_key = '<C-S>'
 
 " coc
-"autocmd FileType python let b:coc_suggest_disable = 1
-"autocmd FileType javascript let b:coc_suggest_disable = 1
 autocmd FileType scss setl iskeyword+=@-@
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles
-  \ call fzf#vim#gitfiles(<q-args>, fzf#vim#with_preview(), <bang>0)
+  \ call fzf#vim#gitfiles(<q-args>, <bang>0)
 
 command! -bang -nargs=* Ag
-  \ call fzf#vim#ag(<q-args>, fzf#vim#with_preview(), <bang>0)
+  \ call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 
 command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview(), <bang>0)
+  \ call fzf#vim#files(<q-args>, <bang>0)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+"easymotion
+let g:EasyMotion_smartcase = 1
 
 " if hidden is not set, TextEdit might fail.
 set hidden
