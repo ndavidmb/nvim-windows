@@ -1,4 +1,4 @@
-set number
+set number relativenumber
 set numberwidth=1
 set clipboard=unnamedplus
 syntax on
@@ -8,14 +8,13 @@ set cursorline
 set encoding=utf-8
 set showmatch
 set sw=2
-set relativenumber
 set termguicolors
 set bg=light
 so ~\.config\nvim-windows\.vim\plugins.vim
 so ~\.config\nvim-windows\.vim\maps.vim
 so ~\.config\nvim-windows\.vim\plugin-config.vim
 
-let ayucolor="mirage"
+let ayucolor="dark"
 
 colorscheme ayu
 
