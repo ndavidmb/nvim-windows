@@ -1,5 +1,4 @@
 set number
-set mouse=a
 set numberwidth=1
 set clipboard=unnamedplus
 syntax on
@@ -11,12 +10,12 @@ set showmatch
 set sw=2
 set relativenumber
 set termguicolors
-set bg=dark
+set bg=light
 so ~\.config\nvim-windows\.vim\plugins.vim
 so ~\.config\nvim-windows\.vim\maps.vim
 so ~\.config\nvim-windows\.vim\plugin-config.vim
 
-let ayucolor="dark"
+let ayucolor="mirage"
 
 colorscheme ayu
 

@@ -1,60 +1,33 @@
-snippet clg "console.log()" b
+snippet clg "console.log" b
 console.log(${1:'$2', $3});
 endsnippet
 
 snippet fore "forEach" b
 $1.forEach(($2) => {
-	$3
+  $3
 });
 endsnippet
 
-snippet for "for" b
+snippet for "for classic" b
 for(let i = $1; i < $2; i++) {
-	$3
+  $3
 }
 endsnippet
 
-snippet pub "public" b
-public $1:$2
-endsnippet
-
-snippet f "function" b
-$1($2): ${3:void} {
-	$4
+snippet if "if conditional" b
+if ( ${1: true} ) {
+  $2
 }
 endsnippet
 
-snippet sub "subscribe" b
-$1.subscribe(($2): ${3:void} => {
-	$4
-});
+snippet input "@Input() [Angular]" b
+@Input() ${1: name}!: ${2: string};
 endsnippet
 
-snippet if "if" b
-if ($1) {
-	$2
-} ${3: else {
-	$4
-}}
+snippet output "@Output() [Angular]" b
+@Output() ${1: name} = new EventEmmitter<${2: string}>();
 endsnippet
 
-snippet var "variable" b
-$1 $2 = ${3:new $4()};
-endsnippet
-
-snippet ret	"return" b
-return $1;
-endsnippet
-
-snippet reducer "reducer" b
-import { createReducer, on, Action } from '@ngrx/store';
-import * as actions from './$1';
-
-export const initialState = $2;
-
-const _$3Reducer = createReducer( initialState,
-  on(actions.$4, ( state ) => $5)
-);
-
-export const $3Reducer = (state = initialState, action: Action) => _$3Reducer(state, action);
+snippet viewchild "@ViewChild() [Angular]" b 
+@ViewChild("${1: nameInHtml}", { static: true }) ${2: nameInTs}!: ElementRef;
 endsnippet

@@ -22,7 +22,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \ },
-      \ 'colorscheme': 'ayu',
+      \ 'colorscheme': 'PaperColor',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''
@@ -69,9 +69,6 @@ command! -bang -nargs=? -complete=dir GFiles
 
 command! -bang -nargs=* Ag
   \ call fzf#vim#ag(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-
-command! -bang -nargs=? -complete=dir Files
-  \ call fzf#vim#files(<q-args>, <bang>0)
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
 
