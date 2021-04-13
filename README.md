@@ -1,4 +1,7 @@
 # nvim-windows
+
+![image](https://user-images.githubusercontent.com/77401753/114603667-9fb0fc80-9c5d-11eb-981b-2c346f7ed25e.png)
+
 ## Mis configuraciones de neovim en windows paso a paso
 
 ### Instalación de Neovim
