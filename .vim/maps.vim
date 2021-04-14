@@ -18,10 +18,6 @@ nmap <silent><Leader>nn :noh<CR>
 nmap <Leader>sm zf%
 nmap <Leader>sn za
 
-" maps Plugin emmet-vim
-nmap <Leader>sr <C-S>,
-vmap <Leader>sr <C-S>,
-
 " maps insert mode
 inoremap jj <Esc>
 inoremap <C-H> <Left>
@@ -34,8 +30,8 @@ vmap <C-D> <Esc>
 " indent
 nmap <Leader>se i<CR><Esc>
 nmap <Leader>sa a<CR><Esc>ko
+nmap <silent><Leader>si :CocCommand prettier.formatFile<CR>
 nmap <Leader>sp o<C-R>"<Esc>
-nmap <Leader>si <Plug>(Prettier)
 
 " shorter commands
 cnoreabbrev blame Gblame
@@ -65,8 +61,8 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <leader>kp :let @*=expand("%")<CR>
 
 " tabs navigation
-map <S-j> :tabprevious<cr>
-map <S-k> :tabnext<cr>
+map <silent><S-j> :tabprevious<cr>
+map <silent><S-k> :tabnext<cr>
 
 " buffers
 map <Leader>ob :Buffers<cr>

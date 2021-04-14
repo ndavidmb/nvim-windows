@@ -1,4 +1,4 @@
-" HTML, JSX
+
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 let g:html5_event_handler_attributes_complete = 0
 let g:html5_rdfa_attributes_complete = 0
@@ -22,7 +22,7 @@ let g:lightline = {
       \ 'component_function': {
       \   'gitbranch': 'fugitive#head',
       \ },
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'ayu',
       \ 'subseparator': {
       \   'left': '',
       \   'right': ''

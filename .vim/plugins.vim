@@ -35,7 +35,6 @@ Plug 'easymotion/vim-easymotion'
 Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/matchtag'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
 
