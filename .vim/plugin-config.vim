@@ -64,6 +64,13 @@ let g:user_emmet_leader_key = '<C-S>'
 
 " coc
 autocmd FileType scss setl iskeyword+=@-@
+let g:coc_global_extensions=[
+                  \'coc-omnisharp',
+                  \'coc-tsserver',
+                  \'coc-angular',
+                  \'coc-html',
+                  \'coc-emmet', 
+                  \'coc-prettier']
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles
