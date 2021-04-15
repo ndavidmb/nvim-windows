@@ -1,4 +1,4 @@
-
+"let g:airline#extensions#tabline#enabled = 1
 let g:closetag_filenames = '*.html,*.js,*.jsx'
 let g:html5_event_handler_attributes_complete = 0
 let g:html5_rdfa_attributes_complete = 0
@@ -105,3 +105,33 @@ set diffopt+=vertical
 
 
 let $FZF_DEFAULT_OPTS='--layout=reverse'
+
+let g:startify_session_dir = $HOME . '/.vim/sessions'
+let g:startify_bookmarks = [
+                  \{'m': 'D:\NotariaVirtualMedellin\NotariaVirtualMed\MiFirma.PortalPublico.Nuevo\WebApp'},
+                  \{'n': 'D:\NotariaVirtual\MiFirma.PortalPublico.Nuevo\WebApp'},
+                  \{'v': 'C:\Users\c-nmontano\.config\nvim-windows'},
+                  \]
+
+let g:startify_fortune_use_unicode = 1
+
+let g:header_string = [
+                  \'• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •',
+                  \'•      ████    █████████████████     ██████  ██████      ██████████████ •',
+                  \'•      ████    ████        ██        ██   ████    ██     ██   ██   ████ •',
+                  \'•      ████    █████████   ██        ██   ████    ██     ██   ██   ████ •',
+                  \'• ██   ████    ██     ██   ██        ██   ████    ██     ██   ██        •',
+                  \'•  █████  ██████ ███████   ██        ██████  ██████      ██   ██   ████ •',
+                  \'• • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • • •',
+                  \]
+let g:startify_custom_header = 'startify#pad(g:header_string)'
+
+let g:startify_commands = [{'g': ':G | only'}]
+
+			" \ { 'header': ['   MRU'],            'type': 'files' },
+let g:startify_lists = [
+			\ { 'header': ['   Sessions'],       'type': 'sessions' },
+			\ { 'header': ['   MRU '. getcwd()], 'type': 'dir' },
+			\ { 'header': ['   Bookmarks'],      'type': 'bookmarks' },
+			\ { 'header': ['   Commands'],      'type': 'commands' }
+			\ ]

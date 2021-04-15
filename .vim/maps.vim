@@ -26,12 +26,15 @@ inoremap <C-L> <Right>
 " maps visual mode
 vmap <C-D> <Esc>
 
+" Menu
+nnoremap <Leader>ss :SSave<CR>
+nnoremap <silent><Leader>sc :SClose<CR>
 
 " indent
 nmap <Leader>se i<CR><Esc>
 nmap <Leader>sa a<CR><Esc>ko
 nmap <silent><Leader>si :CocCommand prettier.formatFile<CR>
-nmap <Leader>sp o<C-R>"<Esc>
+nmap <Leader>sp o<C-R>*<Esc>
 
 " shorter commands
 cnoreabbrev blame Gblame

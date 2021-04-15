@@ -4,6 +4,7 @@ Plug 'sheerun/vim-polyglot'
 
 " status bar
 Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
 
 " Themes
 Plug 'morhetz/gruvbox'
@@ -43,5 +44,8 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-fugitive'
 
 Plug 'tpope/vim-repeat'
+
+" start
+Plug 'mhinz/vim-startify'
 
 call plug#end()
