@@ -57,9 +57,8 @@ let g:vim_matchtag_enable_by_default = 1
 let g:vim_matchtag_files = '*.html'
 
 " emmet
-let g:user_emmet_install_global = 0
+let g:user_emmet_install_global = 1
 let g:user_emmet_mode = 'a'
-autocmd FileType html EmmetInstall
 let g:user_emmet_leader_key = '<C-S>'
 
 " coc
@@ -69,8 +68,17 @@ let g:coc_global_extensions=[
                   \'coc-tsserver',
                   \'coc-angular',
                   \'coc-html',
+                  \'coc-html-css-support',
+                  \'coc-python',
+                  \'coc-css',
                   \'coc-emmet', 
+                  \'coc-clangd', 
                   \'coc-prettier']
+nmap <Leader>rn  <Plug>(coc-rename)
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                        \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
 
 " vim fugitive
 command! -bang -nargs=? -complete=dir GFiles
@@ -115,9 +123,9 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 
 let g:startify_session_dir = $HOME . '/.vim/sessions'
 let g:startify_bookmarks = [
-                  \{'m': 'D:\NotariaVirtualMedellin\NotariaVirtualMed\MiFirma.PortalPublico.Nuevo\WebApp'},
-                  \{'n': 'D:\NotariaVirtual\MiFirma.PortalPublico.Nuevo\WebApp'},
-                  \{'v': 'C:\Users\c-nmontano\.config\nvim-windows'},
+                  \{'v': '~/.config/nvim-windows'},
+                  \{'o': '~/Documents/Olimpia'},
+                  \{'d': 'D:\'},
                   \]
 
 let g:startify_fortune_use_unicode = 1

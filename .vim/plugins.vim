@@ -42,8 +42,10 @@ Plug 'mattn/emmet-vim'
 
 " git
 Plug 'tpope/vim-fugitive'
-
 Plug 'tpope/vim-repeat'
+
+" C#
+Plug 'jlcrochet/vim-razor'
 
 " start
 Plug 'mhinz/vim-startify'

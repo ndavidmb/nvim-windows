@@ -28,7 +28,7 @@ vmap <C-D> <Esc>
 
 " Menu
 nnoremap <Leader>ss :SSave<CR>
-nnoremap <silent><Leader>sc :SClose<CR>
+nnoremap <silent><Leader>sd :SClose<CR>
 
 " indent
 nmap <Leader>se i<CR><Esc>
