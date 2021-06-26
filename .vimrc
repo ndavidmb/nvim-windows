@@ -9,14 +9,12 @@ set encoding=utf-8
 set showmatch
 set sw=2
 set termguicolors
-set bg=light
+set bg=dark
 so ~\.config\nvim-windows\.vim\plugins.vim
 so ~\.config\nvim-windows\.vim\maps.vim
 so ~\.config\nvim-windows\.vim\plugin-config.vim
 
-let ayucolor="dark"
-
-colorscheme ayu
+colorscheme dracula
 
 set laststatus=2
 set noshowmode

@@ -14,12 +14,13 @@ nmap , $a,<Esc>
 nmap <silent><Leader>w :w<CR>
 nmap <silent><Leader>q :q<CR>
 nmap <silent><Leader>nn :noh<CR>
+nmap <silent><Leader>nr :bel 10 sp<CR>
+nmap <silent>Y yyp
 " Minimize tags
 nmap <Leader>sm zf%
 nmap <Leader>sn za
 
 " maps insert mode
-inoremap jj <Esc>
 inoremap <C-H> <Left>
 inoremap <C-L> <Right>
 
@@ -43,7 +44,7 @@ cnoreabbrev diff Gdiff
 cnoreabbrev c++ !g++ -std=c++11 % -Wall -g -o %.out && ./%.out
 " plugs
 map <Leader>nt :NERDTreeFind<CR>
-nmap <Leader>nr :NERDTreeFocus<cr>R<c-w><c-p>
+"nmap <Leader>nr :NERDTreeFocus<cr>R<c-w><c-p>
 map <Leader>p :FZF<CR>
 map <Leader>ag :Ag<CR>
 
@@ -118,7 +119,7 @@ function! OpenTerminal()
     execute "q"
   else
     " open terminal
-    execute "bel 10 sp term://cmd"
+    execute "bel 10 sp term://powershell"
 
     " turn off numbers
     execute "set nonu"

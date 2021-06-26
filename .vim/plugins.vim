@@ -11,6 +11,7 @@ Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
 Plug 'ryanoasis/vim-devicons'
 Plug 'ayu-theme/ayu-vim'
+Plug 'equalsraf/neovim-gui-shim'
 
 " Tree
 Plug 'scrooloose/nerdtree'
@@ -38,7 +39,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'gregsexton/matchtag'
 Plug 'othree/html5.vim'
 Plug 'mattn/emmet-vim'
-
+Plug 'dracula/vim' 
 
 " git
 Plug 'tpope/vim-fugitive'

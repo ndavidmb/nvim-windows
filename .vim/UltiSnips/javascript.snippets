@@ -1,3 +1,10 @@
+global !p
+def cap(word):
+  if word:
+    return word[:1].upper() + word[1:]
+  return ''
+endglobal
+
 snippet clg "console.log()" b
 console.log(${1:'$2', $3});
 endsnippet
@@ -66,4 +73,8 @@ const $1 = ${2:( $3 )} => (
   </$4>
 )
 export default $1
+endsnippet
+
+snippet ust "Use state" b
+const [$1, use`!p snip.rv = cap(t[1])`] = useState($2);
 endsnippet

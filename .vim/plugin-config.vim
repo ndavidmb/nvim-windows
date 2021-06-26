@@ -124,8 +124,8 @@ let $FZF_DEFAULT_OPTS='--layout=reverse'
 let g:startify_session_dir = $HOME . '/.vim/sessions'
 let g:startify_bookmarks = [
                   \{'v': '~/.config/nvim-windows'},
-                  \{'o': '~/Documents/Olimpia'},
-                  \{'d': 'D:\'},
+                  \{'a': 'D:/NotariaDigital/Web.Application.Citizen.Gate'},
+                  \{'d': 'D:/NotariaVirtualMedellin/NotariaVirtualMed/MiFirma.PortalPublico.Nuevo/WebApp'},
                   \]
 
 let g:startify_fortune_use_unicode = 1
